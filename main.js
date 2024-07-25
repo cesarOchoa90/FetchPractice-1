@@ -81,7 +81,7 @@ const FetchUsers = () => {
     const allPosts = document.getElementById('all-posts')
     arrayOfUsers.map((user, index) => {
       const li = document.createElement('li')
-      const text = document.createTextNode(`#${index}, Name: ${user.name}, Username: ${user.username}, Email: ${user.email}, Address: ${user.address}, Phone: ${user.phone}, Website: ${user.website}, Company: ${user.company}`)
+      const text = document.createTextNode(`#${index}, Name: ${user.name}, Username: ${user.username}, Email: ${user.email}, Address: ${user.address.street}, ${user.address.suite},${user.address.geo.lat} Phone: ${user.phone}, Website: ${user.website}, Company: ${user.company.name}, ${user.company.catchPhrase}, ${user.company.bs}`)
       li.appendChild(text)
       allPosts.append(li)
     })
